@@ -1,0 +1,106 @@
+{
+  "known_at": [
+    "2026-08-01T00:00:00+00:00",
+    "2026-09-01T00:00:00+00:00"
+  ],
+  "scenarios": [
+    {
+      "id": "irrigation-2026",
+      "start": "2026-07",
+      "end": "2026-09",
+      "unit": "m3",
+      "meltwater": {},
+      "inflow": {},
+      "storage": {},
+      "demand": {}
+    },
+    {
+      "id": "irrigation-2026-before-maintenance",
+      "start": "2026-07",
+      "end": "2026-09",
+      "unit": "m3",
+      "meltwater": {},
+      "inflow": {},
+      "storage": {"cap-summer": "r1"},
+      "demand": {}
+    }
+  ],
+  "documents": [
+    {
+      "source": "冰川估计组",
+      "document_id": "meltwater-estimate",
+      "revision": "r1",
+      "received_at": "2026-07-20T00:00:00+00:00",
+      "records": [
+        {"kind": "meltwater", "id": "melt-07", "revision": "r1", "valid_from": "2026-07",
+         "payload": {"metric": "meltwater", "unit": "m3", "value": 120}},
+        {"kind": "meltwater", "id": "melt-08", "revision": "r1", "valid_from": "2026-08",
+         "payload": {"metric": "meltwater", "unit": "m3", "value": 160}},
+        {"kind": "meltwater", "id": "melt-09", "revision": "r1", "valid_from": "2026-09",
+         "payload": {"metric": "meltwater", "unit": "m3", "value": 90}}
+      ]
+    },
+    {
+      "source": "冰川估计组",
+      "document_id": "meltwater-restated",
+      "revision": "r1",
+      "received_at": "2026-08-20T00:00:00+00:00",
+      "records": [
+        {"kind": "meltwater", "id": "melt-08", "revision": "r2", "valid_from": "2026-08",
+         "payload": {"metric": "meltwater", "unit": "m3", "value": 210}},
+        {"kind": "meltwater", "id": "melt-09", "revision": "r2", "valid_from": "2026-09",
+         "payload": {"metric": "meltwater", "unit": "m3", "value": 60}}
+      ]
+    },
+    {
+      "source": "水库观测站",
+      "document_id": "inflow",
+      "revision": "r1",
+      "received_at": "2026-07-25T00:00:00+00:00",
+      "records": [
+        {"kind": "inflow", "id": "in-07", "revision": "r1", "valid_from": "2026-07",
+         "payload": {"metric": "inflow", "unit": "m3", "value": 80}},
+        {"kind": "inflow", "id": "in-08", "revision": "r1", "valid_from": "2026-08",
+         "payload": {"metric": "inflow", "unit": "m3", "value": 60}},
+        {"kind": "inflow", "id": "in-09", "revision": "r1", "valid_from": "2026-09",
+         "payload": {"metric": "inflow", "unit": "m3", "value": 40}}
+      ]
+    },
+    {
+      "source": "水库调度组",
+      "document_id": "storage-capacity",
+      "revision": "r1",
+      "received_at": "2026-07-26T00:00:00+00:00",
+      "records": [
+        {"kind": "storage", "id": "cap-summer", "revision": "r1",
+         "valid_from": "2026-07-01", "valid_to": "2026-09-30",
+         "payload": {"metric": "storage", "unit": "m3", "value": 200}}
+      ]
+    },
+    {
+      "source": "水库调度组",
+      "document_id": "storage-maintenance",
+      "revision": "r1",
+      "received_at": "2026-08-10T00:00:00+00:00",
+      "records": [
+        {"kind": "storage", "id": "cap-summer", "revision": "r2",
+         "valid_from": "2026-07-01", "valid_to": "2026-08-31",
+         "payload": {"metric": "storage", "unit": "m3", "value": 200}}
+      ]
+    },
+    {
+      "source": "灌溉管理部门",
+      "document_id": "demand",
+      "revision": "r1",
+      "received_at": "2026-07-27T00:00:00+00:00",
+      "records": [
+        {"kind": "demand", "id": "dem-07", "revision": "r1", "valid_from": "2026-07",
+         "payload": {"metric": "demand", "unit": "m3", "value": 150}},
+        {"kind": "demand", "id": "dem-08", "revision": "r1", "valid_from": "2026-08",
+         "payload": {"metric": "demand", "unit": "m3", "value": 200}},
+        {"kind": "demand", "id": "dem-09", "revision": "r1", "valid_from": "2026-09",
+         "payload": {"metric": "demand", "unit": "m3", "value": 120}}
+      ]
+    }
+  ]
+}
